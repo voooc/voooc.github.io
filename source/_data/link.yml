@@ -1,0 +1,46 @@
+- class_name: 翻斗花园高层住户
+  class_desc: VIP
+  link_list:
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://npm.elemecdn.com/akilar-candyassets/image/siteicon/favicon.png
+      descr: 欢迎入住翻斗花园
+      siteshot: https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg
+    - name: 超逸の技术博客
+      link:  https://yangchaoyi.vip/
+      avatar: https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png
+      descr: 不是只会写业务代码の前端攻城狮
+      siteshot:
+      # 边框大小 默认为0 
+      width: 0px
+      # 边框样式 默认 solid
+      style: solid
+      # 边框颜色 默认淡蓝色 #49b1f5
+      color: "#49b1f5"
+      # 自动旋转 可选值 flash（闪现） link_custom（单色呼吸灯） link_custom1（彩色呼吸灯）
+      custom: link_custom1
+      # 动画时长设定，默认为0
+      time: 4s
+      # name的颜色
+      namecolor: "#ff9191"
+      # descr的颜色
+      descolor: "#ff9191"
+      # 背景颜色
+      background: 0
+      # 鼠标悬停旋转角度
+      rotate: 360deg
+      # 自动旋转 latuo左旋转 rauto右旋转
+      autorotate: "lauto"
+      # 旋转的周期（时长）
+      autotime: 2s
+      #移除此链接的权重 0为否 非0为移除
+      remove: 0
+
+- class_name: 翻斗花园普通住户
+  class_desc: friend
+  link_list:
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://npm.elemecdn.com/akilar-candyassets/image/siteicon/favicon.png
+      descr: 欢迎入住翻斗花园
+      siteshot: https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg

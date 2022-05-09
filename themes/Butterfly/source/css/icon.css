@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3372657 */
+  src: url('//at.alicdn.com/t/font_3372657_audvkligmn7.woff2?t=1651649667467') format('woff2'),
+       url('//at.alicdn.com/t/font_3372657_audvkligmn7.woff?t=1651649667467') format('woff'),
+       url('//at.alicdn.com/t/font_3372657_audvkligmn7.ttf?t=1651649667467') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wechat:before {
+  content: "\e600";
+}
+
+.icon-weibo:before {
+  content: "\e601";
+}
+
+.icon-qq:before {
+  content: "\e602";
+}
+
+.icon-github1:before {
+  content: "\e603";
+}
+
+.icon-csdn:before {
+  content: "\e604";
+}
+
+.icon-bilibili:before {
+  content: "\e609";
+}
+
+.icon-a-guoshushuzhiwu:before {
+  content: "\e8b3";
+}
+
+.icon-a-shuiguoguoshi:before {
+  content: "\e8b4";
+}
+
+.icon-a-xianrenzhangzhiwu:before {
+  content: "\e8b5";
+}
+
+.icon-a-xiangrikuihuahuaduozhiwu:before {
+  content: "\e8b6";
+}
+
+.icon-a-shumushu:before {
+  content: "\e8b7";
+}
+
+.icon-a-shushumuzhiwu:before {
+  content: "\e8b8";
+}
+
+.icon-hudie:before {
+  content: "\e6c7";
+}
