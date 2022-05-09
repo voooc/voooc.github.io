@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WangXiaoJuan&#39;s Blog</title>
+  
+  <subtitle>欢迎来到翻斗花园</subtitle>
+  <link href="https://voooc.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://voooc.github.io/"/>
+  <updated>2022-05-07T16:00:00.000Z</updated>
+  <id>https://voooc.github.io/</id>
+  
+  <author>
+    <name>翻斗花园小王子</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软考之计算机组成与结构</title>
+    <link href="https://voooc.github.io/2022/05/08/%E8%BD%AF%E8%80%83%E2%80%94%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/"/>
+    <id>https://voooc.github.io/2022/05/08/%E8%BD%AF%E8%80%83%E2%80%94%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/</id>
+    <published>2022-05-07T16:00:00.000Z</published>
+    <updated>2022-05-07T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>记录备考软考过程中的知识点，这里只做简要记录，不做深入学习。</p><hr><h2 id="计算机基本组成原理"><a href="#计算机基本组成原理" class="headerlink" title="计算机基本组成原理"></a>计算机基本组成原理</h2><h3 id="码值的表示"><a href="#码值的表示" class="headerlink" title="码值的表示"></a>码值的表示</h3><p>原码与反码的0既有+0也有-0，数码的表示个数为2<sup>n</sup>-1个，补码与移码中，数码的表示个数为2<sup>n</sup>个。</p><p>原码的范围是-(2<sup>n-1</sup>-1)~(2<sup>n-1</sup>-1)，反码与原码相同</p><p>补码的范围是-2<sup>n-1</sup>~2<sup>n-1</sup>-1</p><h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>阶码决定范围，阶码越长，范围越大；</p><p>尾数决定精度，尾数越长，精度越高。</p><p>浮点数运算过程：</p><p>对阶 -&gt; 尾数计算 -&gt; 格式化</p><p>对阶：小数向大数看齐，尾数右移</p><h3 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h3><p>奇偶校验：可检验奇数位错，不可以纠错</p><p>CRC循环冗余校验：可检错，不可纠错</p><p>海明校验：可检错，可纠错，校验码位数是2<sup>r</sup>≥m+r+1</p><h3 id="精简指令和复杂指令"><a href="#精简指令和复杂指令" class="headerlink" title="精简指令和复杂指令"></a>精简指令和复杂指令</h3><p>CISC(复杂指令集)：指令数量多，多种寻址方式</p><p>RISC(精简指令集)：指令数量少，硬布线逻辑控制，适用于流水线</p><h3 id="CPU组成"><a href="#CPU组成" class="headerlink" title="CPU组成"></a>CPU组成</h3><p>CPU分为运算器和控制器两大部分</p><p><strong>运算器（数据的加工处理）</strong></p><ul><li>算术逻辑单元ALU：执行算术运算和逻辑运算</li><li>累加寄存器AC：暂存数据，为ALU提供工作区</li><li>数据缓冲寄存器DR</li><li>状态条件寄存器PSW</li></ul><p><strong>控制器（基本功能就是从内存取指令和执行指令）</strong></p><ul><li>程序计数器PC：存储下一条要执行指令的地址（程序员可以访问）</li><li>指令寄存器IR：存储即将执行的指令</li><li>指令译码器ID</li><li>时序部件</li></ul><h3 id="流水线技术"><a href="#流水线技术" class="headerlink" title="流水线技术"></a>流水线技术</h3><p>流水线建立时间：第一条指令执行时间</p><p>流水线周期：指令分段后，最长段时间</p><p>流水线执行时间（默认使用理论公式）：</p><ul><li>理论公式：流水线建立时间+（指令条数-1）*流水线周期</li><li>实践公式：指令段数*流水线周期+（指令条数-1）流水线周期</li></ul><p>吞吐率：指令条数/流水线执行时间</p><p>最大吞吐率：流水线周期的倒数</p><h3 id="常见存储器"><a href="#常见存储器" class="headerlink" title="常见存储器"></a>常见存储器</h3><p>按内容存取</p><ul><li>相联存储器（cache）</li></ul><p>按地址存取</p><ul><li>随机存取存储器（内存）</li><li>顺序存取存储器（磁带）</li><li>直接存取存储器（磁盘）</li></ul><p>工作方式</p><ul><li>随机存取存储器RAM（DRAM）</li><li>只读存储器ROM（BIOS）</li></ul><h3 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h3><p>解决cpu与主存之间速度容量不匹配的问题</p><p>cache与主存映射三种方式：</p><p>直接相联：冲突率高，电路复杂度简单</p><p>全相联：冲突率低，电路复杂度复杂</p><p>组相联：冲突率折中，电路复杂度折中</p><h3 id="主存编址计算"><a href="#主存编址计算" class="headerlink" title="主存编址计算"></a>主存编址计算</h3><p>内存单元个数 = 最大地址+1-最小地址</p><p>1KB=1024B=1024byte=8192bit<br>1MB=1024KB<br>1GB=1024MB<br>按字编址：转为字；按字节编址，1字节即8bit</p><p><strong>🎈<span class='p red'>例题1</span></strong></p><p>内存按字节编址，地址从A0000H到CFFFFH的内存，共存<u>192K</u>字节，若用存储容量为64K$\times$ 8bit的存储器芯片构成该内存空间，至少需要<u>   3   </u>片</p><p>解：地址从A0000H到CFFFFH，存储单元个数共有CFFFFH+1-A0000H = 30000H，即3 $\times$ 164个，按字节编址，即每个存储单元存放1个字节，也就是1B；该存储器区域总容量=存储单元个数 $\times$ 存储单元内容=3$\times$ 164$\times$ 1B = 192KB；</p><p>若用存储器容量为64K $\times$ 8bit的存储芯片构成，即单位芯片容量为64K $\times$ 8bit，总容量=单位芯片容量 $\times$ 片数，即片数=总容量$\div$单位芯片容量 = 192KB $\div$（64K $\times$ 8bit）=3</p><p><strong>🎈<span class='p red'>例题2</span></strong></p><p>若某计算机字长为32位，内存容量为2GB，按字编址，则可寻址范围是<u> 512M </u></p><p>解：内存容量2GB=2 $\times$ 1024 $\times$ 1024 $\times$ 1024 $\times$ 8位，按字编址时，存储单元的个数为2 $\times$ 1024 $\times$ 1024 $\times$ 1024 $\times$ 8 $\div$ 32 = 512 $\times$ 1024 $\times$ 1024，即可寻址范围是512MB；</p><h3 id="输入输出技术"><a href="#输入输出技术" class="headerlink" title="输入输出技术"></a>输入输出技术</h3><p>程序控制方式：方法简单，硬件开销小</p><p>程序中断方式：与程序控制方式相比，中断方式因为CPU无需等待而提高了传输请求的<br>响应速度。</p><p>DMA方式：DMA方式是为了在主存与外设之间实现高速、批量数据交换而设置的。<br>DMA方式比程序控制方式与中断方式都高效。（CPU是在一个总线周期结束时响应DMA请求的）（DMA控制方式是在主存与外设之间建立数据通路进行数据的交换处理）</p><h3 id="CPU存取速度"><a href="#CPU存取速度" class="headerlink" title="CPU存取速度"></a>CPU存取速度</h3><p>通用寄存器（最快） -&gt; Cache -&gt; 内存 -&gt; 外存</p><h3 id="总线系统"><a href="#总线系统" class="headerlink" title="总线系统"></a>总线系统</h3><p>地址总线的宽度就是处理机寻址范围，若地址总线为n位，则可寻址空间为2<sup>n</sup>字节。字长n位即数据总线的宽度位n位</p><p><strong>🎈<span class='p red'>例题</span></strong><br><div class="note blue icon modern"><i class="note-icon fas fa-bullhorn"></i><p>例题</p></div></p><p>若内存容量为4GB，字长为32，则<u>地址总线和数据总线的宽度都是32</u></p><p>解：可寻址空间位4 $\times$ 1024 $\times$ 1024 $\times$ 1024 位</p><h3 id="系统性能评测"><a href="#系统性能评测" class="headerlink" title="系统性能评测"></a>系统性能评测</h3><p>可靠性、可用性和可维护性是软件的质量属性。</p><p>可靠性是指一个系统对于给定的时间间隔内、在给定条件夏无失效运作的概率。用MTTF/(1+MTTF)来度量，MTTF是平均无故障时间。</p><p>可用性是在给定的时间点上，一个系统能够按照规格说明正确运作的概率。用MTBF/(1+MTBF)来度量，MTTF是平均失效间隔时间。</p><p>可维护性是在给定的使用条件下，在规定的时间间隔内，使用规定的过程和资源完成维护活动的概率。用MTTR/(1+MTTR)来度量，MTTR是平均修复时间。</p><!--分享按钮--><!-- 添加分享按钮 --><p><div class="share-component" data-sites="facebook,twitter,weibo,wechat,qq,douban" data-wechat-qrcode-title="微信分享" data-wechat-qrcode-helper="<p>微信扫一扫，分享本篇给朋友</p>" ></div></p><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="all" onload="this.media='all'"></p><p><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer=""></script></p><style>.social-share {  font-size: 0.85em !important;}</style>]]></content>
+    
+    
+    <summary type="html">软考之计算机组成与结构</summary>
+    
+    
+    
+    <category term="软考" scheme="https://voooc.github.io/categories/%E8%BD%AF%E8%80%83/"/>
+    
+    
+    <category term="软考" scheme="https://voooc.github.io/tags/%E8%BD%AF%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组方法</title>
+    <link href="https://voooc.github.io/2022/05/02/%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://voooc.github.io/2022/05/02/%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</id>
+    <published>2022-05-01T16:00:00.000Z</published>
+    <updated>2022-05-01T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录js中的一些数组方法</p><h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><h3 id="数组转字符串"><a href="#数组转字符串" class="headerlink" title="数组转字符串"></a>数组转字符串</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fruits = [<span class="string">&quot;Banana&quot;</span>, <span class="string">&quot;Orange&quot;</span>, <span class="string">&quot;Apple&quot;</span>, <span class="string">&quot;Mango&quot;</span>];</span><br><span class="line"><span class="comment">// toString()方法</span></span><br><span class="line"><span class="keyword">var</span> temp = fruits.<span class="title function_">toString</span>(); </span><br><span class="line"><span class="keyword">var</span> temp = fruits.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure><h3 id="增删查改"><a href="#增删查改" class="headerlink" title="增删查改"></a>增删查改</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 结尾处增加一个元素</span></span><br><span class="line">fruits.<span class="title function_">push</span>(<span class="string">&#x27;lemon&#x27;</span>)</span><br><span class="line"><span class="comment">// 删除最后一个元素，返回被删除得值</span></span><br><span class="line"><span class="keyword">var</span> x = fruits.<span class="title function_">pop</span>()</span><br><span class="line"><span class="comment">// 删除第一个元素，返回被删除得值</span></span><br><span class="line"><span class="keyword">var</span> x = fruits.<span class="title function_">shift</span>() </span><br><span class="line"><span class="comment">// 在开头添加新元素 返回新数组得长度</span></span><br><span class="line">fruits.<span class="title function_">unshift</span>(<span class="string">&#x27;lemon&#x27;</span>) <span class="comment">// 返回5</span></span><br><span class="line"><span class="comment">// 更改元素</span></span><br><span class="line">fruits[<span class="number">0</span>] = <span class="string">&#x27;lemon&#x27;</span> <span class="comment">// fruits的第一个元素改为lemon</span></span><br><span class="line">fruits[fruits.<span class="property">length</span>] = <span class="string">&#x27;lemon&#x27;</span> <span class="comment">//向后添加lemon</span></span><br><span class="line"><span class="comment">// 删除元素，但是会留下未定义的空间</span></span><br><span class="line"><span class="keyword">delete</span> fruits[<span class="number">0</span>]  <span class="comment">// 首个元素被更改为undefined</span></span><br><span class="line"><span class="comment">// 拼接数组</span></span><br><span class="line">fruits.<span class="title function_">splice</span>(<span class="number">2</span>, <span class="number">0</span>, <span class="string">&quot;Lemon&quot;</span>, <span class="string">&quot;Kiwi&quot;</span>); <span class="comment">// Banana,Orange,Lemon,Kiwi,Apple,Mango</span></span><br><span class="line"><span class="comment">// splice第一个参数（2）定义了应添加新元素的位置（拼接）。</span></span><br><span class="line"><span class="comment">// 第二个参数（0）定义应删除多少元素。</span></span><br><span class="line"><span class="comment">// 其余参数（“Lemon”，“Kiwi”）定义要添加的新元素。</span></span><br><span class="line"><span class="comment">// splice() 方法返回一个包含已删除项的数组</span></span><br><span class="line"><span class="comment">// 可以通过splice在数组中不留空洞的情况下移除元素</span></span><br><span class="line">fruits.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>);        <span class="comment">// 删除 fruits 中的第一个元素</span></span><br><span class="line"><span class="comment">// 合并数组，cancat可以使用任意数量的数组参数</span></span><br><span class="line"><span class="keyword">var</span> myChildren = arr1.<span class="title function_">concat</span>(arr2, arr3);   <span class="comment">// 将arr1、arr2 与 arr3 连接在一起</span></span><br><span class="line"><span class="comment">// 裁剪数组</span></span><br><span class="line"><span class="keyword">var</span> citrus = fruits.<span class="title function_">slice</span>(<span class="number">1</span>); <span class="comment">// 返回新数组，不会从原数组中删除元素[&quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;]</span></span><br><span class="line"><span class="comment">// slice() 可接受两个参数，比如 (1, 3)。 该方法会从开始参数选取元素，直到结束参数（不包括）为止</span></span><br><span class="line"><span class="keyword">var</span> citrus = fruits.<span class="title function_">slice</span>(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// [&quot;Orange&quot;, &quot;Apple&quot;]</span></span><br></pre></td></tr></table></figure><h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以字母顺序对数组进行排序</span></span><br><span class="line">fruits.<span class="title function_">sort</span>();  </span><br><span class="line"><span class="comment">// 反转数组中的元素</span></span><br><span class="line">fruits.<span class="title function_">reverse</span>();</span><br><span class="line"><span class="comment">// 数字排序 sort()按照字符串顺序对值排序 &quot;25&quot;&gt;&quot;100&quot;，所以sort对数值产生不正确的结果</span></span><br><span class="line"><span class="keyword">var</span> points = [<span class="number">40</span>, <span class="number">100</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">25</span>, <span class="number">10</span>];</span><br><span class="line"><span class="comment">// 修正函数升序排序</span></span><br><span class="line">points.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>)&#123;<span class="keyword">return</span> a - b&#125;); </span><br><span class="line"><span class="comment">// 降序排序</span></span><br><span class="line">points.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>)&#123;<span class="keyword">return</span> b - a&#125;); </span><br><span class="line"><span class="comment">// 最高值 </span></span><br><span class="line"><span class="title class_">Math</span>.<span class="property">max</span>.<span class="title function_">apply</span>(<span class="literal">null</span>, arr);</span><br><span class="line"><span class="comment">// 最低值  Math.min.apply([1, 2, 3]) 等于 Math.min(1, 2, 3)。</span></span><br><span class="line"><span class="title class_">Math</span>.<span class="property">min</span>.<span class="title function_">apply</span>(<span class="literal">null</span>, arr);</span><br></pre></td></tr></table></figure><!--分享按钮--><!-- 添加分享按钮 --><p><div class="share-component" data-sites="facebook,twitter,weibo,wechat,qq,douban" data-wechat-qrcode-title="微信分享" data-wechat-qrcode-helper="<p>微信扫一扫，分享本篇给朋友</p>" ></div></p><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="all" onload="this.media='all'"></p><p><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer=""></script></p><style>.social-share {  font-size: 0.85em !important;}</style>]]></content>
+    
+    
+    <summary type="html">一些数组方法</summary>
+    
+    
+    
+    <category term="前端学习" scheme="https://voooc.github.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="JavaScript" scheme="https://voooc.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello world</title>
+    <link href="https://voooc.github.io/2022/05/01/hello-world/"/>
+    <id>https://voooc.github.io/2022/05/01/hello-world/</id>
+    <published>2022-04-30T16:00:00.000Z</published>
+    <updated>2022-05-01T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my blog！记录生活！<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a> </p><style>.social-share {  font-size: 0.85em !important;}</style>]]></content>
+    
+    
+    <summary type="html">开站啦！！！！！！</summary>
+    
+    
+    
+    <category term="生活" scheme="https://voooc.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂物" scheme="https://voooc.github.io/tags/%E6%9D%82%E7%89%A9/"/>
+    
+  </entry>
+  
+</feed>

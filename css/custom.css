@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('/fonts/iconfont.eot');
+  src: url('/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iconfont.woff2') format('woff2'),
+  url('/fonts/iconfont.woff') format('woff'),
+  url('/fonts/iconfont.ttf') format('truetype'),
+  url('/fonts/iconfont.svg#iconfont') format('svg');
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+svg.icon {
+  width: 1em; height: 1em;
+  /* width和height定义图标的默认宽度和高度*/
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+/* 文章页H1-H6图标样式效果 */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+  /* animation:butterfly 1s linear infinite alternate; */
+  -webkit-animation: ccc 1.6s linear infinite ;
+  animation: ccc 1.6s linear infinite ;
+}
+@-webkit-keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+@keyframes ccc {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg)
+  }
+  to {
+      -webkit-transform: rotate(-1turn);
+      transform: rotate(-1turn)
+  }
+}
+/*css颜色变化*/
+#content-inner.layout h1::before {
+  color: #ef50a8 ;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
+#content-inner.layout h2::before {
+  color: #fb7061 ;
+  margin-left: -1.35rem;
+  font-size: 1.1rem;
+  margin-top: -0.12rem;
+}
+#content-inner.layout h3::before {
+  color: #ffbf00 ;
+  margin-left: -1.22rem;
+  font-size: 0.95rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h4::before {
+  color: #a9e000 ;
+  margin-left: -1.05rem;
+  font-size: 0.8rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h5::before {
+  color: #57c850 ;
+  margin-left: -0.9rem;
+  font-size: 0.7rem;
+  margin-top: 0.0rem;
+}
+#content-inner.layout h6::before {
+  color: #5ec1e0 ;
+  margin-left: -0.9rem;
+  font-size: 0.66rem;
+  margin-top: 0.0rem;
+}
+/*设置鼠标碰到标题时，小风车跟随标题变色，且像是被光标阻碍了，转速变慢。*/
+#content-inner.layout h1:hover, #content-inner.layout h2:hover, #content-inner.layout h3:hover, #content-inner.layout h4:hover, #content-inner.layout h5:hover, #content-inner.layout h6:hover {
+  color: #49b1f5 ;
+}
+#content-inner.layout h1:hover::before, #content-inner.layout h2:hover::before, #content-inner.layout h3:hover::before, #content-inner.layout h4:hover::before, #content-inner.layout h5:hover::before, #content-inner.layout h6:hover::before {
+  color: #49b1f5 ;
+  -webkit-animation: ccc 3.2s linear infinite ;
+  animation: ccc 3.2s linear infinite ;
+}
+/*iconfont默认样式*/
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+/* 页脚蝴蝶振翅动画 */
+.copyright svg{
+  animation:butterfly 1s linear infinite alternate;
+}
+@keyframes butterfly {
+  from {
+    transform:rotateY(70deg);
+  }
+  to {
+    transform:rotateY(0deg);
+  }
+}
+/*字体*/
+
+/* @font-face {
+  font-family:'arzhu';
+  src:url('https://cdn.jsdelivr.net/gh/voooc/voooc.github.io@main/font/7bqnjj2ddbm2sf3c3ms4.ttf'); 
+  font-display:swap
+}
+h1#site-title {
+  font-family:arzhu!important
+}
+span#subtitle {
+  font-family:arzhu!important
+}
+a#site-name {
+  font-family:arzhu!important
+} */
+/*去除时钟背景*/
+#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {
+  background-color: unset ;
+  box-shadow: unset ;
+}
+
+/*鼠标移动*/
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+      default;
+}
+a,
+img {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+      default;
+}
+/*滚动条*/
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+/*顶部子菜单居中*/
+
+/* 圆角隐藏 */
+ul.menus_item_child {
+  overflow: hidden;
+  border-radius: 5px;
+}
+/* 调整空隙，确保不会天下武功唯快不破 */
+#nav .menus_items .menus_item .menus_item_child {
+  margin-top: 0px !important;
+}
+
+/* 横向排布子菜单 */
+#nav .menus_items .menus_item .menus_item_child li {
+  display: inline-block ;
+}
+.jg-caption{
+  text-align: center !important;
+}
+#nav.show{
+  font-size: 2em;
+}
+#footer{
+  background: none;
+}
